@@ -43,7 +43,7 @@ public class TwitterStreamToPubSub {
         client.connect();
 
         // This could be done on a separate thread or multiple
-        try ( PublishToPubSub publishToPubSub = new PublishToPubSub(topic)) {
+        try (PublishToPubSub publishToPubSub = new PublishToPubSub(topic)) {
 
             while (!client.isDone()) {
                 String message = queue.take();

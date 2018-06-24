@@ -20,6 +20,7 @@
         <access.token.secret>TODO</access.token.secret>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>com.twitter</groupId>
@@ -29,7 +30,12 @@
         <dependency>
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-pubsub</artifactId>
-            <version>1.31.0</version>
+            <version>1.34.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
         </dependency>
     </dependencies>
 

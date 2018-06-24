@@ -9,16 +9,14 @@ import com.google.cloud.pubsub.v1.Publisher;
 import com.google.pubsub.v1.ProjectTopicName;
 import com.google.protobuf.ByteString;
 import com.google.pubsub.v1.PubsubMessage;
-import com.google.pubsub.v1.TopicName;
 
 public class PublishToPubSub implements AutoCloseable{
 
-    private static String PROJECT_ID = ServiceOptions.getDefaultProjectId();
+    private static final String PROJECT_ID = ServiceOptions.getDefaultProjectId();
     private final ProjectTopicName TOPIC_NAME;
     private final Publisher publisher;
 
     PublishToPubSub(String topic) throws Exception{
-
         TOPIC_NAME = ProjectTopicName.of(PROJECT_ID, topic);
 
         // Build publisher, default settings
