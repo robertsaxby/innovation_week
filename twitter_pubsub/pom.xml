@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!-- this makes maven-tools not bump us to snapshot versions -->
+        <!-- this makes sure maven-tools don't bump to snapshot versions -->
         <stabilized>true</stabilized>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -18,8 +18,8 @@
         <consumer.secret>TODO</consumer.secret>
         <access.token>TODO</access.token>
         <access.token.secret>TODO</access.token.secret>
+        <pubsub.topic>TODO</pubsub.topic>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -38,7 +38,6 @@
             <version>23.0</version>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>
@@ -61,10 +60,10 @@
                         <argument>${consumer.secret}</argument>
                         <argument>${access.token}</argument>
                         <argument>${access.token.secret}</argument>
+                        <argument>${pubsub.topic}</argument>
                     </arguments>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
